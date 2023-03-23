@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="bmi.css">
+</head>
+
+<body>
+    <h1>Kalkulator BMI</h1>
+    <form>
+        <label for="sextype">Jenis Kelamin</label>
+        <fieldset id="sextype">
+            <input type="radio" name="groups">Pria</input>
+            <input type="radio" name="groups">Wanita</input>
+        </fieldset>
+        <br />
+        <fieldset>
+            <label for="weight">Berat Badan (kg)</label>
+            <input type="number" id="weight" required>
+        </fieldset>
+        <br />
+        <fieldset>
+            <label for="age">Usia (tahun)</label>
+            <input type="number" id="age" required>
+        </fieldset>     
+        <br />
+        <fieldset>
+            <label for="height">Tinggi Badan (cm)</label>
+            <input type="number" id="height" required>
+        </fieldset>
+        <button type="button" onclick="calculateBMI()">Hitung BMI</button>
+        <button type="button" onclick="reset()" style="background-color: rgb(100, 100, 100);">Reset</button>
+    </form>
+    <div id="result" style="display: none;">
+        <h1>Hasil</h1>
+        <p id="simpleConclusion"></p>
+        <p id="calcResult"></p>
+        <p id="extendedConclusion"></p>
+    </div>
+
+    <script src="bmi.js"></script>
+</body>
+
+</html>
